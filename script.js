@@ -41,3 +41,12 @@ if (sideLinks.length && sideTargets.length) {
 
   sideTargets.forEach((target) => sideObserver.observe(target));
 }
+
+document.querySelectorAll(".option-row").forEach((row) => {
+  row.addEventListener("click", (event) => {
+    const button = event.target.closest("button");
+    if (!button) return;
+    row.querySelectorAll("button").forEach((item) => item.classList.remove("is-selected"));
+    button.classList.add("is-selected");
+  });
+});
