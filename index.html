@@ -20,12 +20,22 @@
           <a href="./index.html" aria-current="page">品牌</a>
           <a href="./product-white.html">原白水乳</a>
           <a href="./product-eye.html">咖啡因眼霜</a>
+          <a href="./shop.html">电商页</a>
           <a href="./heritage.html">品牌底蕴</a>
         </div>
-        <a class="pill-link" href="#science">看见科研</a>
+        <a class="pill-link" href="./shop.html">进入商城</a>
       </nav>
 
-      <section class="hero hero-brand" data-reveal>
+      <aside class="side-anchor-nav" aria-label="页面章节导航">
+        <a href="#top" data-label="首页">首页</a>
+        <a href="#science" data-label="慢科研">慢科研</a>
+        <a href="#proof" data-label="真实验证">真实验证</a>
+        <a href="#suite" data-label="六屏叙事">六屏叙事</a>
+        <a href="#products" data-label="产品">产品</a>
+        <a href="#heritage-entry" data-label="底蕴">底蕴</a>
+      </aside>
+
+      <section class="hero hero-brand" id="top" data-reveal>
         <div class="hero-copy">
           <p class="eyebrow">Honymate Beauty Naturalism</p>
           <h1>
@@ -42,7 +52,6 @@
         </div>
 
         <div class="hero-visual" aria-label="HBN 品牌视觉">
-          <img class="brand-still" src="./assets/brand/hbn-promo.png" alt="HBN 品牌宣传视觉" />
           <div class="floating-panel panel-one">
             <span>6000+</span>
             <small>人次人体功效实测</small>
@@ -69,7 +78,7 @@
         </div>
       </section>
 
-      <section class="proof-strip" data-reveal>
+      <section class="proof-strip" id="proof" data-reveal>
         <article>
           <strong>100%</strong>
           <span>面护产品通过国际权威机构及三甲医院功效验证</span>
@@ -84,7 +93,7 @@
         </article>
       </section>
 
-      <section class="reference-suite" aria-label="HBN 六屏品牌叙事">
+      <section class="reference-suite" id="suite" aria-label="HBN 六屏品牌叙事">
         <article class="story-screen screen-lab" data-reveal>
           <img class="screen-logo light" src="./assets/brand/hbn-logo-white.png" alt="HBN" />
           <div class="screen-copy">
@@ -178,7 +187,7 @@
         </article>
       </section>
 
-      <section class="product-preview-grid" data-reveal>
+      <section class="product-preview-grid" id="products" data-reveal>
         <a class="product-preview white-product" href="./product-white.html">
           <div class="preview-copy">
             <p class="eyebrow">Product 01</p>
@@ -204,12 +213,15 @@
         </a>
       </section>
 
-      <section class="heritage-teaser" data-reveal>
+      <section class="heritage-teaser" id="heritage-entry" data-reveal>
         <div>
           <p class="eyebrow">Brand Heritage</p>
           <h2>把看不见的坚持，写进品牌底蕴</h2>
         </div>
-        <a class="button dark" href="./heritage.html">进入品牌底蕴页</a>
+        <div class="teaser-actions">
+          <a class="button ghost" href="./shop.html">浏览全线产品</a>
+          <a class="button dark" href="./heritage.html">进入品牌底蕴页</a>
+        </div>
       </section>
     </main>
 

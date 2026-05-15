@@ -13,3 +13,31 @@ const revealObserver = new IntersectionObserver(
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
+
+const updateScrolledState = () => {
+  document.body.classList.toggle("is-scrolled", window.scrollY > 36);
+};
+
+updateScrolledState();
+window.addEventListener("scroll", updateScrolledState, { passive: true });
+
+const sideLinks = [...document.querySelectorAll(".side-anchor-nav a")];
+const sideTargets = sideLinks
+  .map((link) => document.querySelector(link.getAttribute("href")))
+  .filter(Boolean);
+
+if (sideLinks.length && sideTargets.length) {
+  const sideObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        sideLinks.forEach((link) => {
+          link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
+        });
+      });
+    },
+    { rootMargin: "-42% 0px -48% 0px", threshold: 0.01 }
+  );
+
+  sideTargets.forEach((target) => sideObserver.observe(target));
+}
