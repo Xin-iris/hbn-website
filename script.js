@@ -1,5 +1,9 @@
 const revealItems = document.querySelectorAll("[data-reveal]");
 
+document.querySelectorAll(".marquee-track").forEach((track) => {
+  track.innerHTML += track.innerHTML;
+});
+
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
