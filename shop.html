@@ -20,7 +20,10 @@
           <a href="./ai.html">AI选配</a>
           <a href="./heritage.html">品牌底蕴</a>
         </div>
-        <a class="pill-link" href="#shop-grid">全线商品</a>
+        <div class="nav-actions">
+          <a class="pill-link" href="#shop-grid">全线商品</a>
+          <button class="cart-trigger" type="button" data-cart-open>购物车 <span data-cart-count>0</span></button>
+        </div>
       </nav>
 
       <aside class="side-anchor-nav shop-side" aria-label="电商页导航">
@@ -50,17 +53,17 @@
           <h2>真实产品图滚动浏览，点击即可进入详情</h2>
         </div>
         <div class="marquee-track" aria-label="HBN 产品自动滚动陈列">
-          <a class="marquee-card" href="#shop-builder"><img src="./assets/products/items/repair-cream.png" alt="HBN 修护霜" /><span>修护霜</span></a>
-          <a class="marquee-card" href="#shop-builder"><img src="./assets/products/items/radiance-serum.png" alt="HBN 焕彩精华液" /><span>焕彩精华液</span></a>
-          <a class="marquee-card" href="#shop-builder"><img src="./assets/products/items/cleanser.png" alt="HBN 洁面乳" /><span>洁面乳</span></a>
-          <a class="marquee-card" href="#shop-builder"><img src="./assets/products/items/night-cream.png" alt="HBN 晚霜" /><span>晚霜</span></a>
-          <a class="marquee-card" href="#shop-builder"><img src="./assets/products/items/essence-lotion.png" alt="HBN 精萃乳" /><span>精萃乳</span></a>
-          <a class="marquee-card" href="#shop-builder"><img src="./assets/products/items/firming-lotion.png" alt="HBN 精华乳" /><span>精华乳</span></a>
-          <a class="marquee-card" href="#shop-builder"><img src="./assets/products/items/sunscreen.png" alt="HBN 防晒霜" /><span>防晒霜</span></a>
-          <a class="marquee-card" href="#shop-builder"><img src="./assets/products/items/essence-cream.png" alt="HBN 精华霜" /><span>精华霜</span></a>
-          <a class="marquee-card" href="#shop-builder"><img src="./assets/products/items/brightening-milk.png" alt="HBN 白嫩精华乳" /><span>白嫩精华乳</span></a>
-          <a class="marquee-card" href="#shop-builder"><img src="./assets/products/items/ceramide-serum.png" alt="HBN 神经酰胺精华液" /><span>神经酰胺精华液</span></a>
-          <a class="marquee-card" href="#shop-builder"><img src="./assets/products/items/soothing-serum.png" alt="HBN 舒缓修护精华液" /><span>舒缓修护精华液</span></a>
+          <a class="marquee-card" href="./product-detail.html?id=repair-cream"><img src="./assets/products/items/repair-cream.png" alt="HBN 修护霜" /><span>修护霜</span></a>
+          <a class="marquee-card" href="./product-detail.html?id=radiance-serum"><img src="./assets/products/items/radiance-serum.png" alt="HBN 焕彩精华液" /><span>焕彩精华液</span></a>
+          <a class="marquee-card" href="./product-detail.html?id=cleanser"><img src="./assets/products/items/cleanser.png" alt="HBN 洁面乳" /><span>洁面乳</span></a>
+          <a class="marquee-card" href="./product-detail.html?id=night-cream"><img src="./assets/products/items/night-cream.png" alt="HBN 晚霜" /><span>晚霜</span></a>
+          <a class="marquee-card" href="./product-detail.html?id=essence-lotion"><img src="./assets/products/items/essence-lotion.png" alt="HBN 精萃乳" /><span>精萃乳</span></a>
+          <a class="marquee-card" href="./product-detail.html?id=firming-lotion"><img src="./assets/products/items/firming-lotion.png" alt="HBN 精华乳" /><span>精华乳</span></a>
+          <a class="marquee-card" href="./product-detail.html?id=sunscreen"><img src="./assets/products/items/sunscreen.png" alt="HBN 防晒霜" /><span>防晒霜</span></a>
+          <a class="marquee-card" href="./product-detail.html?id=essence-cream"><img src="./assets/products/items/essence-cream.png" alt="HBN 精华霜" /><span>精华霜</span></a>
+          <a class="marquee-card" href="./product-detail.html?id=brightening-milk"><img src="./assets/products/items/brightening-milk.png" alt="HBN 白嫩精华乳" /><span>白嫩精华乳</span></a>
+          <a class="marquee-card" href="./product-detail.html?id=ceramide-serum"><img src="./assets/products/items/ceramide-serum.png" alt="HBN 神经酰胺精华液" /><span>神经酰胺精华液</span></a>
+          <a class="marquee-card" href="./product-detail.html?id=soothing-serum"><img src="./assets/products/items/soothing-serum.png" alt="HBN 舒缓修护精华液" /><span>舒缓修护精华液</span></a>
         </div>
       </section>
 
@@ -107,6 +110,10 @@
             <strong>推荐套组：精萃乳 + 精华乳</strong>
             <span>真实功效验证 / 温和焕亮 / 屏障修护</span>
             <small>预计价格：¥699　包含 2 件正装 + 1 件旅行装</small>
+            <div class="builder-actions">
+              <button type="button" data-add-to-cart data-product-id="essence-lotion">加入精萃乳</button>
+              <button type="button" data-add-to-cart data-product-id="firming-lotion">加入精华乳</button>
+            </div>
           </div>
         </div>
       </section>
@@ -120,6 +127,10 @@
             <span>01</span>
             <h2>精华霜</h2>
             <p>高浓度霜体质地，适合夜间集中修护，改善暗沉、粗糙与干燥后的屏障压力。</p>
+            <div class="showcase-actions">
+              <a class="detail-link" href="./product-detail.html?id=essence-cream">查看详情</a>
+              <button type="button" data-add-to-cart data-product-id="essence-cream">加入购物车</button>
+            </div>
           </div>
         </article>
         <article class="showcase-panel reverse" data-reveal>
@@ -130,6 +141,10 @@
             <span>02</span>
             <h2>焕彩精华液</h2>
             <p>轻盈柱形瓶身，聚焦光泽、细腻度与肤色均匀管理，适合日常叠加护理。</p>
+            <div class="showcase-actions">
+              <a class="detail-link" href="./product-detail.html?id=radiance-serum">查看详情</a>
+              <button type="button" data-add-to-cart data-product-id="radiance-serum">加入购物车</button>
+            </div>
           </div>
         </article>
         <article class="showcase-panel" data-reveal>
@@ -140,6 +155,10 @@
             <span>03</span>
             <h2>晚霜</h2>
             <p>适合夜间修护场景，围绕饱满、弹润和稳定肤况建立更有节奏的晚间路径。</p>
+            <div class="showcase-actions">
+              <a class="detail-link" href="./product-detail.html?id=night-cream">查看详情</a>
+              <button type="button" data-add-to-cart data-product-id="night-cream">加入购物车</button>
+            </div>
           </div>
         </article>
       </section>
@@ -174,18 +193,126 @@
           <h2>11 款产品，按功效与质地有序浏览</h2>
         </div>
 
+        <div class="commerce-toolbar" aria-label="按功效筛选商品">
+          <button class="is-active" type="button" data-product-filter="all">全部</button>
+          <button type="button" data-product-filter="brighten">焕亮提亮</button>
+          <button type="button" data-product-filter="repair">屏障修护</button>
+          <button type="button" data-product-filter="firm">紧致弹润</button>
+          <button type="button" data-product-filter="protect">日间防护</button>
+          <button type="button" data-product-filter="clean">温和清洁</button>
+        </div>
+
         <div class="commerce-grid">
-          <article class="commerce-card"><div class="product-image"><img src="./assets/products/items/repair-cream.png" alt="HBN 修护霜" /></div><h3>修护霜</h3><p>屏障修护 / 稳定滋养</p><strong>¥329</strong><button>查看详情</button></article>
-          <article class="commerce-card"><div class="product-image"><img src="./assets/products/items/radiance-serum.png" alt="HBN 焕彩精华液" /></div><h3>焕彩精华液</h3><p>透亮光泽 / 细腻肤感</p><strong>¥389</strong><button>查看详情</button></article>
-          <article class="commerce-card"><div class="product-image"><img src="./assets/products/items/cleanser.png" alt="HBN 洁面乳" /></div><h3>洁面乳</h3><p>温和清洁 / 洗后不拔干</p><strong>¥159</strong><button>查看详情</button></article>
-          <article class="commerce-card"><div class="product-image"><img src="./assets/products/items/night-cream.png" alt="HBN 晚霜" /></div><h3>晚霜</h3><p>夜间修护 / 弹润饱满</p><strong>¥429</strong><button>查看详情</button></article>
-          <article class="commerce-card"><div class="product-image"><img src="./assets/products/items/essence-lotion.png" alt="HBN 精萃乳" /></div><h3>精萃乳</h3><p>焕亮打底 / 水润吸收</p><strong>¥299</strong><button>查看详情</button></article>
-          <article class="commerce-card"><div class="product-image"><img src="./assets/products/items/firming-lotion.png" alt="HBN 精华乳" /></div><h3>精华乳</h3><p>紧致修护 / 细腻弹润</p><strong>¥339</strong><button>查看详情</button></article>
-          <article class="commerce-card"><div class="product-image"><img src="./assets/products/items/sunscreen.png" alt="HBN 防晒霜" /></div><h3>防晒霜</h3><p>日间防护 / 轻盈成膜</p><strong>¥229</strong><button>查看详情</button></article>
-          <article class="commerce-card"><div class="product-image"><img src="./assets/products/items/essence-cream.png" alt="HBN 精华霜" /></div><h3>精华霜</h3><p>高阶修护 / 滋养锁护</p><strong>¥459</strong><button>查看详情</button></article>
-          <article class="commerce-card"><div class="product-image"><img src="./assets/products/items/brightening-milk.png" alt="HBN 白嫩精华乳" /></div><h3>白嫩精华乳</h3><p>均匀肤色 / 提亮暗沉</p><strong>¥369</strong><button>查看详情</button></article>
-          <article class="commerce-card"><div class="product-image"><img src="./assets/products/items/ceramide-serum.png" alt="HBN 神经酰胺精华液" /></div><h3>神经酰胺精华液</h3><p>强韧屏障 / 舒缓干燥</p><strong>¥319</strong><button>查看详情</button></article>
-          <article class="commerce-card"><div class="product-image"><img src="./assets/products/items/soothing-serum.png" alt="HBN 舒缓修护精华液" /></div><h3>舒缓修护精华液</h3><p>舒缓泛红 / 稳定肤况</p><strong>¥359</strong><button>查看详情</button></article>
+          <article class="commerce-card" data-product-card="repair-cream" data-effect="repair">
+            <a class="product-link" href="./product-detail.html?id=repair-cream">
+              <div class="product-image"><img src="./assets/products/items/repair-cream.png" alt="HBN 修护霜" /></div>
+              <h3>修护霜</h3>
+              <p>屏障修护 / 稳定滋养</p>
+              <ul class="product-effects"><li>舒缓干燥紧绷</li><li>夜间锁护屏障</li></ul>
+              <strong>¥329</strong>
+            </a>
+            <div class="commerce-actions"><a href="./product-detail.html?id=repair-cream">详情</a><button type="button" data-add-to-cart data-product-id="repair-cream">加入购物车</button></div>
+          </article>
+          <article class="commerce-card" data-product-card="radiance-serum" data-effect="brighten">
+            <a class="product-link" href="./product-detail.html?id=radiance-serum">
+              <div class="product-image"><img src="./assets/products/items/radiance-serum.png" alt="HBN 焕彩精华液" /></div>
+              <h3>焕彩精华液</h3>
+              <p>透亮光泽 / 细腻肤感</p>
+              <ul class="product-effects"><li>改善熬夜暗沉</li><li>提升肌肤光泽</li></ul>
+              <strong>¥389</strong>
+            </a>
+            <div class="commerce-actions"><a href="./product-detail.html?id=radiance-serum">详情</a><button type="button" data-add-to-cart data-product-id="radiance-serum">加入购物车</button></div>
+          </article>
+          <article class="commerce-card" data-product-card="cleanser" data-effect="clean">
+            <a class="product-link" href="./product-detail.html?id=cleanser">
+              <div class="product-image"><img src="./assets/products/items/cleanser.png" alt="HBN 洁面乳" /></div>
+              <h3>洁面乳</h3>
+              <p>温和清洁 / 洗后不拔干</p>
+              <ul class="product-effects"><li>卸除日常油污</li><li>保留柔润肤感</li></ul>
+              <strong>¥159</strong>
+            </a>
+            <div class="commerce-actions"><a href="./product-detail.html?id=cleanser">详情</a><button type="button" data-add-to-cart data-product-id="cleanser">加入购物车</button></div>
+          </article>
+          <article class="commerce-card" data-product-card="night-cream" data-effect="firm repair">
+            <a class="product-link" href="./product-detail.html?id=night-cream">
+              <div class="product-image"><img src="./assets/products/items/night-cream.png" alt="HBN 晚霜" /></div>
+              <h3>晚霜</h3>
+              <p>夜间修护 / 弹润饱满</p>
+              <ul class="product-effects"><li>修护夜间损伤</li><li>提升饱满弹润</li></ul>
+              <strong>¥429</strong>
+            </a>
+            <div class="commerce-actions"><a href="./product-detail.html?id=night-cream">详情</a><button type="button" data-add-to-cart data-product-id="night-cream">加入购物车</button></div>
+          </article>
+          <article class="commerce-card" data-product-card="essence-lotion" data-effect="brighten">
+            <a class="product-link" href="./product-detail.html?id=essence-lotion">
+              <div class="product-image"><img src="./assets/products/items/essence-lotion.png" alt="HBN 精萃乳" /></div>
+              <h3>精萃乳</h3>
+              <p>焕亮打底 / 水润吸收</p>
+              <ul class="product-effects"><li>均匀肤色打底</li><li>帮助后续吸收</li></ul>
+              <strong>¥299</strong>
+            </a>
+            <div class="commerce-actions"><a href="./product-detail.html?id=essence-lotion">详情</a><button type="button" data-add-to-cart data-product-id="essence-lotion">加入购物车</button></div>
+          </article>
+          <article class="commerce-card" data-product-card="firming-lotion" data-effect="firm">
+            <a class="product-link" href="./product-detail.html?id=firming-lotion">
+              <div class="product-image"><img src="./assets/products/items/firming-lotion.png" alt="HBN 精华乳" /></div>
+              <h3>精华乳</h3>
+              <p>紧致修护 / 细腻弹润</p>
+              <ul class="product-effects"><li>改善粗糙纹理</li><li>强化弹润支撑</li></ul>
+              <strong>¥339</strong>
+            </a>
+            <div class="commerce-actions"><a href="./product-detail.html?id=firming-lotion">详情</a><button type="button" data-add-to-cart data-product-id="firming-lotion">加入购物车</button></div>
+          </article>
+          <article class="commerce-card" data-product-card="sunscreen" data-effect="protect">
+            <a class="product-link" href="./product-detail.html?id=sunscreen">
+              <div class="product-image"><img src="./assets/products/items/sunscreen.png" alt="HBN 防晒霜" /></div>
+              <h3>防晒霜</h3>
+              <p>日间防护 / 轻盈成膜</p>
+              <ul class="product-effects"><li>SPF50+ PA++++</li><li>减少光老化压力</li></ul>
+              <strong>¥229</strong>
+            </a>
+            <div class="commerce-actions"><a href="./product-detail.html?id=sunscreen">详情</a><button type="button" data-add-to-cart data-product-id="sunscreen">加入购物车</button></div>
+          </article>
+          <article class="commerce-card" data-product-card="essence-cream" data-effect="firm repair">
+            <a class="product-link" href="./product-detail.html?id=essence-cream">
+              <div class="product-image"><img src="./assets/products/items/essence-cream.png" alt="HBN 精华霜" /></div>
+              <h3>精华霜</h3>
+              <p>高阶修护 / 滋养锁护</p>
+              <ul class="product-effects"><li>夜间集中修护</li><li>改善暗沉粗糙</li></ul>
+              <strong>¥459</strong>
+            </a>
+            <div class="commerce-actions"><a href="./product-detail.html?id=essence-cream">详情</a><button type="button" data-add-to-cart data-product-id="essence-cream">加入购物车</button></div>
+          </article>
+          <article class="commerce-card" data-product-card="brightening-milk" data-effect="brighten">
+            <a class="product-link" href="./product-detail.html?id=brightening-milk">
+              <div class="product-image"><img src="./assets/products/items/brightening-milk.png" alt="HBN 白嫩精华乳" /></div>
+              <h3>白嫩精华乳</h3>
+              <p>均匀肤色 / 提亮暗沉</p>
+              <ul class="product-effects"><li>针对黑黄暗沉</li><li>温和焕亮不拔干</li></ul>
+              <strong>¥369</strong>
+            </a>
+            <div class="commerce-actions"><a href="./product-detail.html?id=brightening-milk">详情</a><button type="button" data-add-to-cart data-product-id="brightening-milk">加入购物车</button></div>
+          </article>
+          <article class="commerce-card" data-product-card="ceramide-serum" data-effect="repair">
+            <a class="product-link" href="./product-detail.html?id=ceramide-serum">
+              <div class="product-image"><img src="./assets/products/items/ceramide-serum.png" alt="HBN 神经酰胺精华液" /></div>
+              <h3>神经酰胺精华液</h3>
+              <p>强韧屏障 / 舒缓干燥</p>
+              <ul class="product-effects"><li>补充屏障脂质</li><li>改善干燥敏感</li></ul>
+              <strong>¥319</strong>
+            </a>
+            <div class="commerce-actions"><a href="./product-detail.html?id=ceramide-serum">详情</a><button type="button" data-add-to-cart data-product-id="ceramide-serum">加入购物车</button></div>
+          </article>
+          <article class="commerce-card" data-product-card="soothing-serum" data-effect="repair">
+            <a class="product-link" href="./product-detail.html?id=soothing-serum">
+              <div class="product-image"><img src="./assets/products/items/soothing-serum.png" alt="HBN 舒缓修护精华液" /></div>
+              <h3>舒缓修护精华液</h3>
+              <p>舒缓泛红 / 稳定肤况</p>
+              <ul class="product-effects"><li>缓解换季不适</li><li>维持肌肤稳定</li></ul>
+              <strong>¥359</strong>
+            </a>
+            <div class="commerce-actions"><a href="./product-detail.html?id=soothing-serum">详情</a><button type="button" data-add-to-cart data-product-id="soothing-serum">加入购物车</button></div>
+          </article>
         </div>
       </section>
 

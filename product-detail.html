@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HBN 产品详情</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="detail">
+    <main class="site-shell detail-shell">
+      <nav class="nav">
+        <a class="brand-lockup" href="./index.html" aria-label="HBN 首页">
+          <img src="./assets/brand/hbn-logo-dark.png" alt="HBN" />
+        </a>
+        <div class="nav-links" aria-label="主要导航">
+          <a href="./index.html">品牌</a>
+          <a href="./product-white.html">原白水乳</a>
+          <a href="./product-eye.html">咖啡因眼霜</a>
+          <a href="./shop.html">电商页</a>
+          <a href="./ai.html">AI选配</a>
+          <a href="./heritage.html">品牌底蕴</a>
+        </div>
+        <div class="nav-actions">
+          <a class="pill-link" href="./shop.html#shop-grid">返回商城</a>
+          <button class="cart-trigger" type="button" data-cart-open>购物车 <span data-cart-count>0</span></button>
+        </div>
+      </nav>
+
+      <section class="detail-hero" data-product-detail data-reveal>
+        <div class="detail-gallery">
+          <div class="detail-product-stage">
+            <img data-detail-image src="./assets/products/items/essence-lotion.png" alt="HBN 产品" />
+          </div>
+          <div class="detail-stat">
+            <span data-detail-stat-label>功效焦点</span>
+            <strong data-detail-stat>96.9%</strong>
+            <small data-detail-stat-copy>用户认可美白淡斑真功效</small>
+          </div>
+        </div>
+
+        <div class="detail-info">
+          <p class="eyebrow" data-detail-category>HBN 功效护肤</p>
+          <h1 data-detail-name>精萃乳</h1>
+          <p class="detail-summary" data-detail-summary>焕亮打底，水润吸收，适合日常功效护肤第一步。</p>
+          <div class="detail-price" data-detail-price>¥299</div>
+
+          <div class="purchase-card">
+            <h2>选择购买方案</h2>
+            <div class="variant-options" data-variant-options></div>
+
+            <div class="quantity-row">
+              <span>数量</span>
+              <div class="quantity-stepper">
+                <button type="button" data-qty-minus>-</button>
+                <strong data-detail-qty>1</strong>
+                <button type="button" data-qty-plus>+</button>
+              </div>
+            </div>
+
+            <div class="purchase-actions">
+              <button class="button dark" type="button" data-detail-add>加入购物车</button>
+              <button class="button ghost" type="button" data-cart-open>查看购物车</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail-proof-section" data-reveal>
+        <div>
+          <p class="eyebrow">功效证据</p>
+          <h2 data-detail-proof-title>让功效不止停留在概念</h2>
+        </div>
+        <div class="detail-claims" data-detail-claims></div>
+      </section>
+
+      <section class="detail-routine-section" data-reveal>
+        <div class="routine-copy">
+          <p class="eyebrow">使用路径</p>
+          <h2>加入你的日常护肤秩序</h2>
+          <p data-detail-usage>洁面后取适量，均匀涂抹于面部，后续搭配乳霜或防晒。</p>
+        </div>
+        <div class="routine-mini-grid">
+          <article><span>01</span><strong>清洁</strong><p>保持肤感干净，为功效成分吸收做准备。</p></article>
+          <article><span>02</span><strong>功效</strong><p data-detail-step>按肌肤需求叠加核心产品，减少无效堆叠。</p></article>
+          <article><span>03</span><strong>锁护</strong><p>用乳霜或防晒完成日夜不同场景的保护。</p></article>
+        </div>
+      </section>
+
+      <section class="detail-recommend-section" data-reveal>
+        <div class="section-heading">
+          <p class="eyebrow">关联搭配</p>
+          <h2>搭配购买，更完整地呈现功效路径</h2>
+        </div>
+        <div class="detail-related-grid" data-related-products></div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <div><h3>Company</h3><a href="./index.html">关于 HBN</a><a href="./shop.html">全线产品</a><a href="./ai.html">AI选配</a><a href="./heritage.html">品牌底蕴</a></div>
+          <div><h3>Social</h3><a href="#">小红书</a><a href="#">微博</a><a href="#">抖音</a></div>
+          <div class="footer-newsletter"><h3>Stay in Touch</h3><p>订阅 HBN，了解真实功效、科研验证与新品信息。</p><form><input type="email" placeholder="添加你的邮箱" aria-label="邮箱" /><button type="button">订阅</button></form></div>
+          <div><h3>Legal</h3><a href="#">隐私政策</a><a href="#">服务条款</a><p>© 2026 HBN<br />All Rights Reserved</p></div>
+        </div>
+        <div class="footer-brand"><img src="./assets/brand/hbn-logo-white.png" alt="HBN" /></div>
+      </footer>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
