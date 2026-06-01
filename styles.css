@@ -18,6 +18,15 @@
   --shadow: 0 28px 70px rgba(44, 34, 30, 0.18);
   --serif: var(--font-heavy), "PingFang SC", "Microsoft YaHei", sans-serif;
   --sans: var(--font-regular), "PingFang SC", "Microsoft YaHei", sans-serif;
+  --hbn-paper-texture:
+    radial-gradient(circle, rgba(67, 38, 28, 0.04) 0 1px, transparent 1.5px) 0 0 / 28px 28px,
+    radial-gradient(circle at 78% 18%, rgba(243, 208, 201, 0.22), transparent 30%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.42), rgba(250, 235, 232, 0.22) 46%, rgba(223, 229, 212, 0.18));
+  --hbn-dark-texture:
+    linear-gradient(90deg, rgba(255, 248, 237, 0.055) 1px, transparent 1px) 0 0 / 64px 64px,
+    linear-gradient(rgba(255, 248, 237, 0.045) 1px, transparent 1px) 0 0 / 64px 64px,
+    radial-gradient(circle at 76% 18%, rgba(243, 208, 201, 0.13), transparent 30%),
+    radial-gradient(circle at 18% 80%, rgba(232, 207, 170, 0.12), transparent 28%);
 }
 
 /* Refined luxury layout and commerce additions */
@@ -609,7 +618,7 @@ h2 {
   padding: 86px 0;
   background:
     linear-gradient(rgba(255, 250, 246, 0.9), rgba(255, 250, 246, 0.9)),
-    url("./assets/patterns/kazakh-pattern.png") center / cover;
+    var(--hbn-paper-texture);
 }
 
 .marquee-heading {
@@ -813,13 +822,13 @@ h2 {
 .product-education {
   background:
     linear-gradient(rgba(25, 28, 43, 0.92), rgba(25, 28, 43, 0.95)),
-    url("./assets/patterns/kazakh-pattern.png") center / cover;
+    var(--hbn-dark-texture);
 }
 
 .education-grid article {
   background:
     linear-gradient(rgba(18, 20, 31, 0.78), rgba(18, 20, 31, 0.92)),
-    url("./assets/patterns/kazakh-pattern.png") center / cover;
+    var(--hbn-dark-texture);
 }
 
 @media (max-width: 1180px) {
@@ -1391,6 +1400,484 @@ body[data-page="brand"] .screen-copy p {
   }
 }
 
+/* Final mobile shop nav guard */
+@media (max-width: 560px) {
+  body[data-page="shop"] .nav {
+    display: flex;
+    height: 72px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+  }
+
+  body[data-page="shop"] .nav .nav-links,
+  body[data-page="shop"] .pill-link {
+    display: none;
+  }
+
+  body[data-page="shop"] .nav-actions {
+    width: auto;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  body[data-page="shop"] .cart-trigger {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 132px;
+    min-height: 38px;
+    padding: 0 12px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 560px) {
+  body[data-page="shop"] .nav-actions {
+    width: auto;
+    justify-content: flex-end;
+  }
+
+  body[data-page="shop"] .cart-trigger {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 132px;
+    white-space: nowrap;
+  }
+}
+
+/* HBN commerce upgrade: AI-generated flagship visuals */
+body[data-page="shop"] .shop-hero {
+  min-height: 100vh;
+  align-items: center;
+  padding: 132px clamp(28px, 7vw, 110px) 82px;
+  background:
+    linear-gradient(90deg, rgba(12, 9, 7, 0.92) 0%, rgba(24, 15, 10, 0.78) 33%, rgba(33, 22, 15, 0.24) 64%, rgba(33, 22, 15, 0.05) 100%),
+    url("./assets/generated/hbn-shop-hero-ai.png") center / cover;
+}
+
+body[data-page="shop"] .shop-hero::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 30%;
+  background: linear-gradient(transparent, rgba(12, 9, 7, 0.58));
+  content: "";
+  pointer-events: none;
+}
+
+body[data-page="shop"] .shop-hero-copy {
+  display: grid;
+  gap: 22px;
+  max-width: 760px;
+}
+
+body[data-page="shop"] .shop-hero-copy h1 {
+  margin: 0;
+  font-size: clamp(54px, 7.4vw, 116px);
+}
+
+body[data-page="shop"] .shop-hero-copy p:not(.eyebrow) {
+  margin: 0;
+  max-width: 610px;
+  color: rgba(255, 248, 237, 0.82);
+  font-size: 18px;
+  line-height: 1.86;
+}
+
+.hero-commerce-tags,
+.hero-proof-row,
+.shop-benefits,
+.proof-metrics,
+.bundle-list,
+.bundle-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-commerce-tags span {
+  padding: 9px 14px;
+  border: 1px solid rgba(255, 248, 237, 0.26);
+  border-radius: 999px;
+  color: rgba(255, 248, 237, 0.82);
+  background: rgba(255, 248, 237, 0.08);
+  backdrop-filter: blur(12px);
+  font-size: 13px;
+}
+
+.hero-proof-row {
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.hero-proof-row article {
+  display: grid;
+  min-width: 138px;
+  gap: 5px;
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 248, 237, 0.18);
+  border-radius: 8px;
+  background: rgba(20, 14, 10, 0.42);
+  backdrop-filter: blur(18px);
+}
+
+.hero-proof-row strong {
+  color: #e8cfaa;
+  font-family: var(--font-heavy), var(--sans);
+  font-size: 34px;
+  line-height: 1;
+}
+
+.hero-proof-row span {
+  color: rgba(255, 248, 237, 0.68);
+  font-size: 13px;
+}
+
+.shop-benefits {
+  padding: 18px clamp(28px, 7vw, 110px);
+  background: #15110f;
+}
+
+.shop-benefits article {
+  flex: 1 1 240px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5px 14px;
+  min-height: 116px;
+  align-content: center;
+  padding: 24px;
+  border: 1px solid rgba(255, 248, 237, 0.14);
+  border-radius: 8px;
+  color: #fff8ed;
+  background:
+    linear-gradient(135deg, rgba(255, 248, 237, 0.08), rgba(255, 248, 237, 0.02)),
+    rgba(67, 38, 28, 0.4);
+}
+
+.shop-benefits span {
+  grid-row: span 2;
+  color: #e8cfaa;
+  font-family: var(--font-heavy), var(--sans);
+}
+
+.shop-benefits strong {
+  font-family: var(--font-heavy), var(--sans);
+  font-size: 22px;
+}
+
+.shop-benefits p {
+  margin: 0;
+  color: rgba(255, 248, 237, 0.68);
+  line-height: 1.65;
+}
+
+.shop-proof-feature,
+.shop-bundle {
+  display: grid;
+  grid-template-columns: minmax(420px, 1.05fr) minmax(380px, 0.95fr);
+  gap: clamp(28px, 5vw, 74px);
+  align-items: center;
+  padding: 104px clamp(28px, 7vw, 110px);
+}
+
+.shop-proof-feature {
+  color: #fff8ed;
+  background:
+    linear-gradient(135deg, rgba(21, 17, 15, 0.98), rgba(67, 38, 28, 0.94)),
+    var(--hbn-dark-texture);
+}
+
+.proof-feature-media,
+.bundle-media {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 34px 90px rgba(20, 14, 10, 0.22);
+}
+
+.proof-feature-media img,
+.bundle-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.proof-feature-copy,
+.bundle-copy {
+  display: grid;
+  gap: 22px;
+}
+
+.proof-feature-copy h2,
+.bundle-copy h2 {
+  margin: 0;
+  font-size: clamp(36px, 4.8vw, 72px);
+}
+
+.proof-feature-copy p:not(.eyebrow),
+.bundle-copy p:not(.eyebrow) {
+  max-width: 620px;
+  margin: 0;
+  line-height: 1.84;
+}
+
+.proof-feature-copy p:not(.eyebrow) {
+  color: rgba(255, 248, 237, 0.76);
+}
+
+.proof-metrics {
+  gap: 12px;
+}
+
+.proof-metrics article {
+  flex: 1 1 170px;
+  display: grid;
+  gap: 8px;
+  padding: 20px;
+  border: 1px solid rgba(255, 248, 237, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 248, 237, 0.07);
+}
+
+.proof-metrics strong {
+  color: #e8cfaa;
+  font-family: var(--font-heavy), var(--sans);
+}
+
+.proof-metrics span {
+  color: rgba(255, 248, 237, 0.66);
+  line-height: 1.6;
+}
+
+.shop-bundle {
+  grid-template-columns: minmax(380px, 0.86fr) minmax(420px, 1.14fr);
+  background:
+    linear-gradient(rgba(255, 250, 246, 0.9), rgba(255, 250, 246, 0.9)),
+    var(--hbn-paper-texture);
+}
+
+.bundle-copy p:not(.eyebrow) {
+  color: #5d514a;
+}
+
+.bundle-list span {
+  padding: 12px 15px;
+  border: 1px solid rgba(67, 38, 28, 0.14);
+  border-radius: 999px;
+  color: #43261c;
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.bundle-actions button {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid rgba(67, 38, 28, 0.18);
+  border-radius: 999px;
+  color: #fff8ed;
+  background: #2d2119;
+  font: inherit;
+  cursor: pointer;
+}
+
+body[data-page="shop"] .shop-builder {
+  background:
+    linear-gradient(rgba(255, 250, 246, 0.92), rgba(255, 250, 246, 0.92)),
+    var(--hbn-paper-texture);
+}
+
+body[data-page="shop"] .builder-visual {
+  background:
+    linear-gradient(rgba(42, 28, 20, 0.08), rgba(42, 28, 20, 0.08)),
+    url("./assets/generated/hbn-bundle-gift-ai.png") center / cover;
+}
+
+body[data-page="shop"] .builder-product-card {
+  min-height: 570px;
+  padding: 36px;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(255, 250, 246, 0.18), rgba(255, 250, 246, 0.02));
+  backdrop-filter: blur(3px);
+}
+
+body[data-page="shop"] .product-education {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(21, 17, 15, 0.94), rgba(35, 25, 19, 0.82), rgba(21, 17, 15, 0.78)),
+    url("./assets/generated/hbn-efficacy-lab-ai.png") center / cover;
+}
+
+body[data-page="shop"] .education-grid article {
+  min-height: 320px;
+  background: rgba(20, 14, 10, 0.58);
+  backdrop-filter: blur(16px);
+}
+
+body[data-page="shop"] .commerce-toolbar {
+  position: sticky;
+  top: 88px;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: -8px 0 30px;
+  padding: 12px;
+  border: 1px solid rgba(67, 38, 28, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 250, 246, 0.84);
+  backdrop-filter: blur(16px);
+}
+
+body[data-page="shop"] .commerce-toolbar button {
+  min-height: 38px;
+  padding: 0 15px;
+  border: 1px solid rgba(67, 38, 28, 0.14);
+  border-radius: 999px;
+  color: #43261c;
+  background: rgba(255, 255, 255, 0.68);
+  font: inherit;
+  cursor: pointer;
+}
+
+body[data-page="shop"] .commerce-toolbar button.is-active {
+  color: #fff8ed;
+  background: #43261c;
+}
+
+body[data-page="shop"] .commerce-card {
+  position: relative;
+  gap: 14px;
+  padding: 14px 14px 18px;
+  background: linear-gradient(180deg, rgba(255, 250, 246, 0.96), rgba(245, 235, 226, 0.96));
+}
+
+body[data-page="shop"] .commerce-card::before {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 1;
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: #fff8ed;
+  background: rgba(67, 38, 28, 0.88);
+  content: "功效正装";
+  font-size: 12px;
+}
+
+body[data-page="shop"] .commerce-card .product-image {
+  background:
+    radial-gradient(circle at 50% 32%, rgba(255, 255, 255, 0.84), transparent 33%),
+    linear-gradient(145deg, #f3e5da, #d2c2aa);
+}
+
+body[data-page="shop"] .commerce-actions a,
+body[data-page="shop"] .commerce-actions button {
+  min-height: 42px;
+}
+
+body[data-page="shop"] .ritual-section {
+  background:
+    linear-gradient(120deg, rgba(21, 17, 15, 0.96), rgba(67, 38, 28, 0.86)),
+    var(--hbn-dark-texture);
+}
+
+@media (max-width: 1180px) {
+  .shop-proof-feature,
+  .shop-bundle {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-bundle .bundle-media {
+    order: -1;
+  }
+}
+
+@media (max-width: 980px) {
+  body[data-page="shop"] .shop-hero {
+    min-height: 820px;
+    align-items: end;
+    padding: 128px 24px 56px;
+    background-position: 62% center;
+  }
+
+  .hero-proof-row article {
+    min-width: 120px;
+  }
+
+  .shop-benefits,
+  .shop-proof-feature,
+  .shop-bundle {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  body[data-page="shop"] .commerce-toolbar {
+    position: relative;
+    top: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  body[data-page="shop"] .nav {
+    display: flex;
+    height: 72px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+  }
+
+  body[data-page="shop"] .nav .nav-links,
+  body[data-page="shop"] .pill-link {
+    display: none;
+  }
+
+  body[data-page="shop"] .nav-actions {
+    display: flex;
+    margin-left: auto;
+  }
+
+  body[data-page="shop"] .cart-trigger {
+    min-height: 38px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+  .hero-commerce-tags,
+  .hero-proof-row,
+  .bundle-list,
+  .bundle-actions {
+    display: grid;
+    width: min(100%, 330px);
+  }
+
+  .hero-commerce-tags span,
+  .bundle-list span {
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .hero-proof-row article,
+  .shop-benefits article,
+  .proof-metrics article {
+    min-width: 0;
+  }
+
+  .shop-proof-feature,
+  .shop-bundle {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .proof-feature-media img,
+  .bundle-media img {
+    aspect-ratio: 4 / 3;
+  }
+}
+
 /* AI selection page */
 body[data-page="ai"] {
   background: #17140f;
@@ -1469,7 +1956,7 @@ body.is-scrolled[data-page="ai"] .side-anchor-nav a.is-active {
   overflow: hidden;
   background:
     linear-gradient(120deg, rgba(18, 14, 10, 0.96) 0%, rgba(43, 33, 25, 0.88) 46%, rgba(92, 98, 71, 0.72) 100%),
-    url("./assets/patterns/kazakh-pattern.png") center / cover;
+    var(--hbn-dark-texture);
 }
 
 .ai-hero::before {
@@ -1617,7 +2104,7 @@ body.is-scrolled[data-page="ai"] .side-anchor-nav a.is-active {
   padding: 104px clamp(28px, 7vw, 110px);
   background:
     linear-gradient(rgba(251, 247, 245, 0.96), rgba(251, 247, 245, 0.96)),
-    url("./assets/patterns/kazakh-pattern.png") center / cover;
+    var(--hbn-paper-texture);
 }
 
 .ai-form-panel,
@@ -1697,7 +2184,7 @@ body.is-scrolled[data-page="ai"] .side-anchor-nav a.is-active {
   color: #fff8ed;
   background:
     linear-gradient(145deg, rgba(67, 38, 28, 0.96), rgba(92, 98, 71, 0.9)),
-    url("./assets/patterns/kazakh-pattern.png") center / cover;
+    var(--hbn-dark-texture);
 }
 
 .result-header {
@@ -1800,7 +2287,7 @@ body.is-scrolled[data-page="ai"] .side-anchor-nav a.is-active {
   color: #fff8ed;
   background:
     linear-gradient(rgba(38, 34, 25, 0.88), rgba(38, 34, 25, 0.96)),
-    url("./assets/patterns/kazakh-pattern.png") center / cover;
+    var(--hbn-dark-texture);
 }
 
 .routine-flow span {
@@ -2030,7 +2517,7 @@ body[data-page="detail"] .site-shell {
   padding: 94px clamp(28px, 7vw, 110px) 86px;
   background:
     linear-gradient(rgba(255, 250, 246, 0.94), rgba(255, 250, 246, 0.94)),
-    url("./assets/patterns/kazakh-pattern.png") center / cover;
+    var(--hbn-paper-texture);
 }
 
 .detail-gallery {
@@ -2359,7 +2846,7 @@ body[data-page="detail"] .site-shell {
   border-radius: 8px;
   background:
     linear-gradient(rgba(255, 250, 246, 0.88), rgba(255, 250, 246, 0.96)),
-    url("./assets/patterns/kazakh-pattern.png") center / cover;
+    var(--hbn-paper-texture);
 }
 
 .routine-mini-grid span {
@@ -2459,7 +2946,7 @@ body.cart-open .cart-layer {
   padding: 28px;
   background:
     linear-gradient(rgba(255, 250, 246, 0.96), rgba(255, 250, 246, 0.96)),
-    url("./assets/patterns/kazakh-pattern.png") center / cover;
+    var(--hbn-paper-texture);
   box-shadow: -26px 0 70px rgba(20, 14, 10, 0.18);
   transform: translateX(100%);
   transition: transform 0.28s ease;
