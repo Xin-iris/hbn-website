@@ -5959,3 +5959,33 @@ body[data-page="heritage"] .certificate-card { border-radius: 24px; box-shadow: 
   body[data-page="shop"] .commerce-actions button,
   body[data-page="shop"] .commerce-actions a { font-size: 13px; }
 }
+
+/* Keep both product slogans on exactly two intentional lines. */
+body[data-page="white"] .product-hero,
+body[data-page="eye"] .product-hero {
+  grid-template-columns: minmax(0, 0.95fr) minmax(440px, 1.05fr);
+}
+
+body[data-page="white"] .product-hero h1,
+body[data-page="eye"] .product-hero h1 {
+  max-width: none;
+  font-size: clamp(58px, 6.2vw, 94px);
+  line-height: 1.02;
+}
+
+body[data-page="white"] .product-hero h1 span,
+body[data-page="eye"] .product-hero h1 span {
+  white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+  body[data-page="white"] .product-hero,
+  body[data-page="eye"] .product-hero {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page="white"] .product-hero h1,
+  body[data-page="eye"] .product-hero h1 {
+    font-size: clamp(42px, 11.8vw, 72px);
+  }
+}
